@@ -18,7 +18,7 @@ export class VehicleCommands {
   }
 
   public async unlockDoors(): Promise<true> {
-    return this.apiRequestor.getRequest<DefaultCommandResult>(this.commandAPIPath(`door_unlock`))
+    return this.apiRequestor.postRequest<DefaultCommandResult>(this.commandAPIPath(`door_unlock`))
       .then((r) => this.mapResponse(r));
   }
 
@@ -28,7 +28,7 @@ export class VehicleCommands {
   }
 
   public async honkHorn(): Promise<true> {
-    return this.apiRequestor.getRequest<DefaultCommandResult>(this.commandAPIPath(`honk_horn`))
+    return this.apiRequestor.postRequest<DefaultCommandResult>(this.commandAPIPath(`honk_horn`))
       .then((r) => this.mapResponse(r));
   }
 
@@ -41,7 +41,7 @@ export class VehicleCommands {
    * Starts HVAC in auto mode.
    */
   public async startHVAC(): Promise<true> {
-    return this.apiRequestor.getRequest<DefaultCommandResult>(this.commandAPIPath(`auto_conditioning_start`))
+    return this.apiRequestor.postRequest<DefaultCommandResult>(this.commandAPIPath(`auto_conditioning_start`))
       .then((r) => this.mapResponse(r));
   }
 
