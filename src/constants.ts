@@ -1,4 +1,4 @@
-export const API_HOST = "";
+export const API_HOST = "/owner-api";
 export const API_URL = `${API_HOST}/api/1`;
 export const STREAM_HOST = "streaming.vn.teslamotors.com";
 export const STREAM_URL = `wss://${STREAM_HOST}/streaming/`;
